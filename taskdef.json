@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "sweet-home-frontend",
-            "image": "sweet-home",
+            "image": "<IMAGE1_NAME>",
             "essential": true,
             "portMappings": [
                 {

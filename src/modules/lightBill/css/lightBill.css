@@ -1,0 +1,151 @@
+/* General container styling */
+.light-bill-table {
+  padding: 20px;
+  max-width: 1800px;
+  /* overflow-x: auto; */
+  margin: 0 auto;
+  background-color: #303030;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  color: #fff;
+}
+
+.titleDiv {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.noData {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #eae6e6dc;
+}
+
+/* Dropdown container */
+.dropdown-container-lightbill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.dropdown-item {
+  width: 100%; /* Full width on small screens */
+  max-width: 250px;
+}
+
+.form-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  /* background-color: #007bff; */
+  color: #fff;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+tbody tr {
+  border-bottom: 1px solid #dee2e6;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #495057;
+}
+
+tbody td {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody td[data-label]:before {
+  display: none;
+}
+/* Mobile view for screens 500px or smaller */
+@media (max-width: 500px) {
+  .dropdown-item {
+    width: 100%;
+    max-width: 350px; /* Optional, if you want to restrict the max width */
+  }
+}
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .dropdown-item {
+    width: 100%;
+  }
+
+  .table thead {
+    display: none; /* Hide header for small screens */
+  }
+
+  .table tbody tr {
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #000000ab;
+  }
+
+  .table tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .table tbody td[data-label]:before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 10px;
+    color: #000000ab;
+    display: inline-block;
+  }
+}
+
+/* See All Button Styling */
+.see-all-btn {
+  /* background-color: #007bff; Blue background color */
+  color: #007bff; /* White text color */
+  border: 1px solid #007bff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+
+  display: inline-block;
+}
+
+.see-all-btn:hover {
+  color: white;
+  background-color: #0057b352; /* Darker blue when hovering */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.see-all-btn:focus {
+  outline: none;
+}
+
+.see-all-btn:active {
+  background-color: #003d7a; /* Even darker blue when clicked */
+}

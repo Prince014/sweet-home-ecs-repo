@@ -1,0 +1,15 @@
+.language-switcher select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .language-switcher select:focus {
+    outline: none;
+    border-color: #47c6f8;
+  }

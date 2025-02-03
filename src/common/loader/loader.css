@@ -1,0 +1,29 @@
+/* Loader container */
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 9999;
+  }
+  
+  /* Loader GIF styling */
+  .loader-gif {
+    width: 100px; /* Adjust the size of the GIF */
+    height: 100px;
+  }
+  
+  /* Loader text styling */
+  .loader-text {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+  }
+  

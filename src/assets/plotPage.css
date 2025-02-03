@@ -1,0 +1,46 @@
+.plotPage .addPlotPage,
+.plotPage .plotListPage {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #66626287;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plotPage h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.plotPage .form-group {
+  margin-bottom: 15px;
+}
+
+.plotPage .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.plotPage .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.plotPage .submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.plotPage .submit-btn:hover {
+  background-color: #218838;
+}

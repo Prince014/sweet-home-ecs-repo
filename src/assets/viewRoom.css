@@ -1,0 +1,231 @@
+.paymentPage {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Fraunces", serif !important;
+  background-color: #66626287;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+}
+
+.paymentPage h1,
+.paymentPage h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.titleDiv {
+  margin: 20px;
+  font-size: 3rem;
+  color: white;
+  font-weight: 600;
+}
+
+.titleDiv .title {
+  color: #47c6f8;
+}
+
+/* Dropdown Container */
+.dropdown-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.dropdown-label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.dropdown-select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  color: black;
+  transition: 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.dropdown-select:focus {
+  border-color: #4c51bf; /* Blue border on focus */
+  background-color: #eef2ff; /* Light blue background on focus */
+}
+
+.dropdown-select option {
+  padding: 10px;
+}
+
+/* Room Container */
+.roomContainer {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(320px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Individual Room Card */
+.roomCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.roomCard:hover {
+  transform: translateY(-10px); /* Slight hover lift */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Room Details Section */
+.roomDetails p {
+  margin: 8px 0;
+  color: #333;
+  font-size: 1.5rem;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  max-width: auto; /* Ensure it works within the container */
+}
+
+/* Vacant Room Styling */
+.vacantRoom {
+  border: 1px solid #ff4d4d; /* Red border for vacant rooms */
+  color: #b30000; /* Red text for vacant indicator */
+}
+
+/* Tenant Section */
+.tenantDetails {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.tenantDetails p {
+  margin: 8px 0;
+  color: #555;
+  font-size: 1.2rem;
+}
+
+.tenantImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #47c6f8;
+}
+
+/* Pay Now Button */
+.payNowBtn {
+  background-color: #47c6f8;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.payNowBtn:hover {
+  background-color: #4fa8e4; /* Slightly lighter blue */
+}
+
+/* No Tenant Text */
+.noTenant {
+  font-weight: bold;
+  color: #b30000; /* Red color for "No tenant" text */
+  margin-top: 10px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* No Rooms Found Section */
+.noRoomsFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.noRoomsMessage {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.noRoomsImage {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+.noRoomsText {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.noRoomsSubText {
+  font-size: 2.5rem;
+  /* color: #666; */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .roomContainer {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+
+  .roomCard {
+    padding: 15px;
+  }
+
+  .roomCard img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .tenantImage {
+    width: 80px;
+    height: 80px;
+  }
+
+  .payNowBtn {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  .noRoomsText {
+    font-size: 1.5rem;
+  }
+
+  .noRoomsSubText {
+    font-size: 1rem;
+  }
+}

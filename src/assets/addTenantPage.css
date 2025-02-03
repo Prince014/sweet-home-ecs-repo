@@ -1,0 +1,273 @@
+.addTenantPage {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #66626287;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Fraunces", serif !important;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: rgb(248, 244, 244);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.dynamic-document-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.dynamic-document-field input[type="file"] {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Ensure button stays visible */
+.remove-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+.preview-image-tenant {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.remove-btn:hover {
+  background-color: #e60000;
+}
+
+/* Hide icon by default and show text on larger screens */
+.remove-btn .button-icon {
+  display: none;
+}
+
+.remove-btn .button-text {
+  display: inline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .dynamic-document-field {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .dynamic-document-field input[type="file"] {
+    width: 100%; /* Ensure input spans full width */
+    font-size: 12px; /* Make font smaller */
+    padding: 3px; /* Reduce padding */
+  }
+
+  .remove-btn {
+    width: auto;
+    padding: 3px 8px;
+    font-size: 12px;
+  }
+}
+
+/* On smaller screens, show icon only */
+@media (max-width: 768px) {
+  .remove-btn .button-icon {
+    display: inline;
+  }
+
+  /* .remove-btn .button-text {
+      display: none;
+    } */
+}
+
+.add-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #0056b3;
+}
+
+.submit-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #28a7e9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.add-more {
+  display: block;
+  margin: 20px auto;
+  padding: 5px 5px;
+  color: bisque;
+  background-color: #0b010a;
+}
+
+.submit-btn:hover {
+  background-color: #1b7db9;
+}
+
+.dynamic-document-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  border-radius: 5px;
+  /* background-color: #f9f9f9; */
+}
+
+.uploaded-document-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.document-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.document-icon {
+  font-size: 20px;
+  color: #007bff;
+}
+
+.document-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 5px;
+}
+
+.document-link:hover {
+  text-decoration: underline;
+}
+
+.remove-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.remove-btn:hover {
+  background-color: #ff1a1a;
+}
+
+.new-document-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.upload-input {
+  display: none;
+}
+
+.upload-label {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.upload-label:hover {
+  background-color: #0056b3;
+}
+/* Mobile View */
+@media (max-width: 768px) {
+  .dynamic-document-field {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 10px 5px; /* Reduce padding for smaller screens */
+  }
+
+  .uploaded-document-preview {
+    flex-direction: column; /* Stack document info and remove button */
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .document-info {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; /* Ensure full width for text */
+  }
+
+  .remove-btn {
+    align-self: flex-end; /* Align remove button to the right */
+    font-size: 12px; /* Adjust font size for mobile */
+    padding: 5px 8px; /* Reduce padding */
+  }
+
+  .document-icon {
+    font-size: 18px; /* Adjust icon size */
+  }
+
+  .document-link {
+    font-size: 14px; /* Adjust link font size */
+  }
+
+  .upload-label {
+    font-size: 12px; /* Smaller font size for upload label */
+    padding: 5px 8px;
+  }
+}

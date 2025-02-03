@@ -1,0 +1,35 @@
+steps:
+  - name: "node:20"
+    args:
+      - "-c"
+      - npm install
+    entrypoint: bash
+
+  - name: "node:20"
+    args:
+      - "-c"
+      - npm run build
+    entrypoint: bash
+
+  - name: gcr.io/cloud-builders/gcloud
+    args:
+      - "-c"
+      - |-
+        echo "$$SSH_KEY" | base64 -d > id_rsa
+        chmod 600 id_rsa
+        scp -o "StrictHostKeyChecking=no" -i id_rsa -r dist/* ubuntu@34.23.4.207:/var/www/html/
+    entrypoint: bash
+    secretEnv:
+      - SSH_KEY
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/946179324171/secrets/sweet-home-secret/versions/latest
+      env: SSH_KEY
+##Remove this path while using it  in cloud build
+
+#for secret sshkey was generated and converted in to base64 that why we are decoding it in step
+

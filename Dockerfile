@@ -1,11 +1,11 @@
-FROM node:18 AS builder
+FROM public.ecr.aws/docker/library/node:18 AS builder
 WORKDIR /app
 COPY package.json package-lock.json .
 RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx
+FROM public.ecr.aws/nginx/nginx:latest
 WORKDIR /app
 COPY --from=builder /app/dist /usr/share/nginx/html
 
